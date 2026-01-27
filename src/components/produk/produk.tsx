@@ -107,7 +107,7 @@ export default function Produk() {
                         <figure className="relative h-60 w-full">
                           <img
                             className="absolute inset-0 size-full rounded-xl object-cover"
-                            src="/hasiltambang/nikel2.jpg"
+                            src="/hasiltambang/nikel4.jpg"
                             alt="Blog Image"
                           />
                         </figure>
