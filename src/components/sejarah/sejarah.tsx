@@ -40,7 +40,7 @@ export default function Sejarah() {
       <div className="relative border-l border-gray-200 pb-10 pl-10">
         <span className="absolute left-[-9px] top-1 h-4 w-4 rounded-full bg-gray-800" />
 
-        <h3 className="text-sm text-gray-500">2023 – Sekarang</h3>
+        <h3 className="text-sm text-gray-500">2024 – Sekarang</h3>
         <h4 className="font-semibold text-gray-800">
           PT Indo Cipta Kontraktor
         </h4>
@@ -51,32 +51,7 @@ export default function Sejarah() {
       </div>
       </AnimatedContent>
 
-      {/* Item */}
-      <AnimatedContent
-        distance={100}
-        direction="vertical"
-        reverse={true}
-        duration={1}
-        ease="power3.out"
-        initialOpacity={0}
-        animateOpacity
-        scale={1}
-        threshold={0.2}
-        delay={0}
-      >
-      <div className="relative border-l border-gray-200 pb-10 pl-10">
-        <span className="absolute left-[-9px] top-1 h-4 w-4 rounded-full bg-gray-800" />
-
-        <h3 className="text-sm text-gray-500">2021 – 2022</h3>
-        <h4 className="font-semibold text-gray-800">
-          Tahap Persiapan & Legalitas
-        </h4>
-        <p className="mt-2 text-sm text-gray-600">
-          Penyusunan perizinan, pembentukan tim inti, serta studi kelayakan
-          wilayah tambang dan rantai distribusi.
-        </p>
-      </div>
-      </AnimatedContent>
+      
 
       {/* Item terakhir */}
       <AnimatedContent
@@ -94,7 +69,7 @@ export default function Sejarah() {
       <div className="relative pl-10">
         <span className="absolute left-[-9px] top-1 h-4 w-4 rounded-full bg-gray-800" />
 
-        <h3 className="text-sm text-gray-500">2020</h3>
+        <h3 className="text-sm text-gray-500">2023</h3>
         <h4 className="font-semibold text-gray-800">Awal Berdiri</h4>
         <p className="mt-2 text-sm text-gray-600">
           Perusahaan didirikan dengan visi menjadi pemain utama di industri
