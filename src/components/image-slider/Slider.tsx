@@ -86,7 +86,7 @@ export default function ImageSlider() {
               className="mt-2 text-white/80 tracking-wide
                 text-xs md:text-sm lg:text-base"
             >
-              Mining • Energy • Resources
+            <span className="text-green-600">  Mining</span> • Energy • <span className="text-blue-600">Resources</span>
             </p>
           </div>
 
