@@ -1,4 +1,4 @@
-import { Building2, Facebook, GlobeIcon, Phone, Twitter } from "lucide-react";
+import { Building2, Facebook, GlobeIcon, Mail, Phone, Twitter } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
@@ -59,11 +59,11 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-3">
                 <Phone size={16} />
-                <span>+62 863 4863 678</span>
+                <span>0812-4125-8089</span>
               </li>
               <li className="flex items-center gap-3">
-                <Building2 size={16} />
-                <span>Jakarta, Indonesia</span>
+                <Mail size={16} />
+                <span>recruitment.indociptakontraktor@gmail.com</span>
               </li>
             </ul>
           </div>

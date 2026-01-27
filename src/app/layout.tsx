@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+
 import "./globals.css";
 
 import PrelineScriptWrapper from "@/components/PrelineScriptWrapper";
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <head>
         <link rel="icon" href="/logo/logoick.ico" />
+        <meta name="google-site-verification" content="MLmyth0zVnKaFu_zifsdWceIqrcIzALjJU5HxWyHtHw" />
       </head>
       <body className={`${poppins.variable} antialiased overflow-y-scroll`}>
         <Header />
