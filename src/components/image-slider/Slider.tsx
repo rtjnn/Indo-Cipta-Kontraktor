@@ -68,7 +68,7 @@ export default function ImageSlider() {
           <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
             {/* Logo */}
             <img
-              src="/logo/logoick.png"
+              src="/logo/logoick1.png"
               alt="Logo PT Indo Cipta Kontraktor"
               className="w-32 md:w-40 lg:w-56 xl:w-64 mb-4 drop-shadow-xl"
             />

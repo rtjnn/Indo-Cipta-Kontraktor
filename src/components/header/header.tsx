@@ -83,10 +83,10 @@ export default function Header() {
           <Link href="/">
             <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full  md:h-14 md:w-14 shadow-lg shadow-gray-800 bg-white">
               <Image
-                src="/logo/logoick.png"
+                src="/logo/logoick1.png"
                 alt="Logo"
-                width={56}
-                height={56}
+                width={80}
+                height={80}
                 className="object-contain"
               />
             </div>
