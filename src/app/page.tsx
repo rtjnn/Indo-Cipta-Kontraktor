@@ -23,12 +23,15 @@ export default function Home() {
         <section id="Visi-misi" className=" bg-gray-100 pt-10">
           <Visimisi />
         </section>
+        
         <section id="Sejarah" className=" bg-white p-20">
           <Sejarah />
         </section>
 
         <section id="Produk" className=" bg-gray-100 pt-20"><Produk/></section>
+
         <section id="hubungi" className=" bg-gray-800"> <Footer /></section>
+        
       </main>
 
      

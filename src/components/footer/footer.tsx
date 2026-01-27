@@ -67,6 +67,19 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+
+          <div className="md:col-span-2">
+            <div className="w-full h-40 md:h-[200px] rounded-lg overflow-hidden shadow-lg">
+              <iframe
+        src="https://www.google.com/maps?q=-4.3284502,121.7092855&hl=en&z=15&output=embed"
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        allowFullScreen
+        loading="lazy"
+      ></iframe>
+            </div>
+          </div>
         </div>
 
         {/* DIVIDER */}
@@ -80,21 +93,19 @@ export default function Footer() {
               className="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 focus:outline-hidden focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none"
               href="#"
             >
-                <Facebook className="shrink-0 size-4" />
-             
+              <Facebook className="shrink-0 size-4" />
             </Link>
             <Link
               className="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 focus:outline-hidden focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none"
               href="#"
             >
-             <GlobeIcon className="shrink-0 size-4" />
+              <GlobeIcon className="shrink-0 size-4" />
             </Link>
             <Link
               className="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 focus:outline-hidden focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none"
               href="#"
             >
-                <Twitter className="shrink-0 size-4" />
-              
+              <Twitter className="shrink-0 size-4" />
             </Link>
             <Link
               className="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 focus:outline-hidden focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none"
