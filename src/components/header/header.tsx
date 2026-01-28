@@ -98,10 +98,13 @@ export default function Header() {
           <Link href="#hubungi" className="text-sm font-medium hover:text-blue-400">
             Hubungi Kami
           </Link>
+          <Link href="/carrer" className="text-sm font-medium hover:text-blue-400">
+            Karir
+          </Link>
           <Link
-            href="#login"
-            className="cursor-not-allowed text-sm font-medium text-gray-400"
-            aria-disabled
+            href="/login"
+            className="text-sm font-medium hover:text-blue-400"
+            
           >
             Login
           </Link>

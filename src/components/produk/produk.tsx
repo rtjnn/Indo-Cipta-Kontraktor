@@ -134,21 +134,21 @@ export default function Produk() {
                       </figure>
                     </AnimatedContent>
                   </div>
-<AnimatedContent
-                        distance={100}
-                        direction="vertical"
-                        reverse={false}
-                        duration={1}
-                        ease="power3.out"
-                        initialOpacity={0}
-                        animateOpacity
-                        scale={1}
-                        threshold={0.1}
-                        delay={0}
-                      >
-                  <span className="mt-3 block text-sm text-gray-500">
-                    Foto Nikel
-                  </span>
+                  <AnimatedContent
+                    distance={100}
+                    direction="vertical"
+                    reverse={false}
+                    duration={1}
+                    ease="power3.out"
+                    initialOpacity={0}
+                    animateOpacity
+                    scale={1}
+                    threshold={0.1}
+                    delay={0}
+                  >
+                    <span className="mt-3 block text-sm text-gray-500">
+                      Foto Nikel
+                    </span>
                   </AnimatedContent>
                 </div>
               </div>

@@ -10,7 +10,7 @@ export default function Footer() {
           {/* BRAND */}
           <div className="lg:col-span-1">
             <img
-              src="/logo/logoick1.png"
+              src="/logo/logoick.1png"
               alt="PT Indo Cipta Kontraktor"
               className="w-28 mb-4"
             />
