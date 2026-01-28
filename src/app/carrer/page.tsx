@@ -19,7 +19,6 @@ export default function Career() {
     )
       .then((res) => res.json())
       .then((result) => {
-        // 🔥 FILTER YANG AKTIF SAJA
         const aktif = result.filter(
           (item: Lowongan) => item.status === "aktif"
         );
@@ -30,33 +29,69 @@ export default function Career() {
   }, []);
 
   if (loading) {
-    return <p className="text-center mt-10">Loading lowongan...</p>;
+    return (
+      <div className="max-w-4xl mx-auto p-6">
+        <p className="text-center text-gray-500 animate-pulse">
+          Memuat lowongan...
+        </p>
+      </div>
+    );
   }
 
   return (
-    <div className="max-w-3xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-6 text-center">
-        Lowongan Pekerjaan
-      </h1>
+    <section className="bg-gray-50 min-h-screen py-16">
+      <div className="max-w-4xl mx-auto px-4">
+        {/* Title */}
+        <div className="text-center mb-10">
+          <h1 className="text-4xl font-bold text-gray-800">
+            Lowongan Pekerjaan
+          </h1>
+          <p className="text-gray-500 mt-2">
+            Temukan posisi yang sesuai dengan keahlianmu
+          </p>
+        </div>
 
-      {data.length === 0 && (
-        <p className="text-center text-gray-500">
-          Belum ada lowongan aktif
-        </p>
-      )}
+        {/* Empty State */}
+        {data.length === 0 && (
+          <div className="text-center text-gray-500">
+            Belum ada lowongan aktif saat ini
+          </div>
+        )}
 
-      <div className="space-y-4">
-        {data.map((item) => (
-          <Link
-            key={item.id}
-            href={`/carrer/${item.id}`}
-            className="block border rounded-lg p-4 hover:bg-gray-50 transition"
-          >
-            <h2 className="text-xl font-semibold">{item.posisi}</h2>
-            <p className="text-sm text-green-600 mt-1">Status: Aktif</p>
-          </Link>
-        ))}
+        {/* List */}
+        <div className="grid gap-6">
+          {data.map((item) => (
+            <Link
+              key={item.id}
+              href={`/carrer/${item.id}`}
+              className="group bg-white rounded-xl p-6 border shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="flex items-center justify-between">
+                <h2 className="text-xl font-semibold text-gray-800 group-hover:text-blue-600 transition">
+                  {item.posisi}
+                </h2>
+
+                <span className="text-xs font-medium px-3 py-1 rounded-full bg-green-100 text-green-700">
+                  Aktif
+                </span>
+              </div>
+
+              <p className="text-sm text-gray-500 mt-2">
+                Klik untuk melihat detail & melamar posisi ini
+              </p>
+            </Link>
+          ))}
+        </div>
+         <a
+  href="/"
+  className="inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-blue-600 transition"
+>
+  ← Kembali
+</a>
       </div>
-    </div>
+     
+
+    </section>
+    
   );
 }

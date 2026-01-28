@@ -1,11 +1,15 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-export function middleware(req: NextRequest) {
+/**
+ * Proxy (pengganti middleware)
+ * Akan dijalankan di setiap request sesuai matcher
+ */
+export default function proxy(req: NextRequest) {
   const auth = req.cookies.get("auth")?.value;
   const pathname = req.nextUrl.pathname;
 
-  // BLOK SEMUA ADMIN & TURUNANNYA
+  // 🔒 PROTECT SEMUA ROUTE /admin
   if (pathname.startsWith("/admin")) {
     if (!auth) {
       return NextResponse.redirect(new URL("/login", req.url));
@@ -15,6 +19,9 @@ export function middleware(req: NextRequest) {
   return NextResponse.next();
 }
 
+/**
+ * Tentukan route mana saja yang kena proxy
+ */
 export const config = {
   matcher: ["/admin/:path*"],
 };
