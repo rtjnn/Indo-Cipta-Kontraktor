@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     siteName: "PT Indo Cipta Kontraktor",
     images: [
       {
-        url: "https://indo-cipta-kontraktor-13bf.vercel.app/logo/logoick.1png",
+        url: "https://indo-cipta-kontraktor-13bf.vercel.app/logo/logoick1.png",
         width: 1200,
         height: 630,
         alt: "PT Indo Cipta Kontraktor",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     title: "PT Indo Cipta Kontraktor",
     description:
       "Perusahaan pertambangan nikel terpercaya di Indonesia.",
-    images: ["https://indo-cipta-kontraktor-13bf.vercel.app/logo/logoick.1png"],
+    images: ["https://indo-cipta-kontraktor-13bf.vercel.app/logo/logoick1.png"],
   },
 };
 
