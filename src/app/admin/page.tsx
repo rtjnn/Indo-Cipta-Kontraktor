@@ -11,14 +11,12 @@ export default async function AdminPage() {
   if (role !== "admin") {
     redirect("/login");
   }
-return(
+  return (
     <>
-    <AdminHeader />
-    <main className="max-w-7xl mx-auto p-4">
-      <AdminTable />
-    </main>
-
+      <AdminHeader />
+      <main className="max-w-7xl mx-auto p-4">
+        <AdminTable />
+      </main>
     </>
-)
-  
+  );
 }

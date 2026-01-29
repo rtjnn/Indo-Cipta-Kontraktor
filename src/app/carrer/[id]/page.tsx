@@ -1,13 +1,16 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useParams } from "next/navigation";
 
 export default function LamarPage() {
   const searchParams = useSearchParams();
-  const posisiFromUrl = searchParams.get("id"); // ambil ID dari URL
+  const params = useParams();
 
-  // FORM STATE
+  // AMBIL ID DARI ?id= ATAU DARI /carrer/2
+  const posisiFromUrl =
+    searchParams.get("id") || (params?.id as string) || "";
+
   const [form, setForm] = useState({
     email: "",
     source: "",
@@ -22,7 +25,7 @@ export default function LamarPage() {
     tahunLulus: "",
     pendidikan: "",
     pengalaman: "",
-    posisi: "", // kosong dulu, nanti isi dari URL
+    posisi: "",
   });
 
   const [submitting, setSubmitting] = useState(false);
@@ -31,7 +34,6 @@ export default function LamarPage() {
   const WEB_APP_URL =
     "https://script.google.com/macros/s/AKfycbz-xm-YtO_f77GIuyf9GKQcj-qA7d1TQT8Z3vDGrBmKjDCZtygiH8MDtdjSKNnGUKA/exec";
 
-  // 🔥 SET POSISI DARI URL SAAT COMPONENT MOUNT
   useEffect(() => {
     if (posisiFromUrl) {
       setForm((prev) => ({
@@ -41,22 +43,19 @@ export default function LamarPage() {
     }
   }, [posisiFromUrl]);
 
-  // HANDLE INPUT CHANGE
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  // HANDLE SUBMIT
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
     setMessage("");
 
     try {
-      // kirim form apa adanya, termasuk posisi
       await fetch(WEB_APP_URL, {
         method: "POST",
         mode: "no-cors",
@@ -66,7 +65,6 @@ export default function LamarPage() {
 
       setMessage("✅ Lamaran berhasil dikirim!");
 
-      // reset semua field kecuali posisi
       setForm((prev) => ({
         ...prev,
         email: "",
@@ -82,11 +80,11 @@ export default function LamarPage() {
         tahunLulus: "",
         pendidikan: "",
         pengalaman: "",
-        posisi: prev.posisi, // posisi tetap
+        posisi: prev.posisi,
       }));
     } catch (err) {
       console.error(err);
-      setMessage("❌ Terjadi kesalahan, silakan coba lagi");
+      setMessage("❌ Terjadi kesalahan");
     } finally {
       setSubmitting(false);
     }
@@ -97,7 +95,6 @@ export default function LamarPage() {
       <h1 className="text-2xl font-bold mb-4">Form Lamaran</h1>
 
       <form className="space-y-4" onSubmit={handleSubmit}>
-        {/* POSISI (AUTO DARI ID, READONLY) */}
         <input
           type="text"
           name="posisi"
@@ -130,10 +127,10 @@ export default function LamarPage() {
           <option value="linkedin">LinkedIn</option>
           <option value="website_perusahaan">Website resmi perusahaan</option>
           <option value="job_portal">Job portal</option>
-          <option value="teman_keluarga">Teman / Keluarga / Relasi</option>
-          <option value="sekolah_kampus">Sekolah / Kampus / Alumni</option>
-          <option value="koran">Koran / Media cetak</option>
-          <option value="job_fair">Event Job Fair</option>
+          <option value="teman_keluarga">Teman / Keluarga</option>
+          <option value="sekolah_kampus">Sekolah / Kampus</option>
+          <option value="koran">Koran</option>
+          <option value="job_fair">Job Fair</option>
           <option value="lainnya">Lainnya</option>
         </select>
 
